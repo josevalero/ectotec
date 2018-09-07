@@ -1,0 +1,44 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/*	Estilos Generales*/
+.button{
+	background: #ffffff;
+	color: #02C7FD;
+	width: 80px;
+	height: 25px;
+	border-radius: 5px;
+	margin-top: 10px;
+
+
+}
+.titulo{
+	background:#12EB02;/*fondo de color*/
+	border-radius: 40px;/* estilo de esquina de cuadro*/
+	width: 1000px;
+	height: 150px;
+	margin-top: 50px;
+
+}
+.font-titulo{
+     font-family: "time new roman";
+     font-weight:normal;/* ancho de letra*/
+     font-size: 70px;
+     margin-top: -60px;/*posiscion de texto*/
+     color: #ffffff;/*color de letra*/
+}
+.contenido{
+	margin-top: 50px;
+
+}
+.padre{
+	font-family: arial;/* tipo de letra*/
+	width:200px; /*Aquí va el ancho de la Celda*/
+ height:20px;/*Aquí el Alto*/
+
+}
+
+

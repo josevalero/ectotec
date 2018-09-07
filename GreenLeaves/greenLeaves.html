@@ -1,21 +1,112 @@
-<html>
+<html  >
 <head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script> 
+<script type="text/javascript" src="js/angularjs.js"></script>
+
+
 <title>Green Leaves</title>
 </head>
 <body>
-	<h1>Green Leaves</h1>
-	
+<center>
+ 	<table>
+ 		<tr>
+ 			<td>
+ 				<div>
+		
+	 <table  class="titulo"  border="1">
+		 <tr>
+			<td ><h1 class="font-titulo"> &nbsp;&nbsp;Green Leaves</h1></td>
+			<td  ><img src="images/images.png" align="right"></td>
+		 </tr>
+	 </table>
+    </div>
+ 	
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td>
+ 				<div>
 	<form>
-		<div>
-			<p>Hello World</p>
+		
+			<table class="contenido" border="1">
+				<tr>
+					<td class="padre">
+						Nombre: 
+					</td>
+					<td>
+				        <input type="text" name="nombre" size="50px"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td class="padre">
+						E-mail:
+					</td>
+					<td>
+						<input type="text" name="email" size="50px" /><br />
+					</td>
+				</tr>
+				<tr>
+					<td class="padre">
+						Tel&eacute;fono:
+					</td>
+					<td>
+						<input type="text" name="telefono" size="50px" /><br />
+					</td>
+				</tr>
+				<tr>
+					<td class="padre">
+						Fecha:
+					</td>
+					<td>
+				
 
-		</div>
-	Nombre:<input type="text" name="nombre" /><br />
-	E-mail:<input type="text" name="email" /><br />
-	Tel&eacute;fono:<input type="text" name="telefono" /><br />
-	Fecha:<input type="text" name="fecha" /><br />
-	Ciudad y Estado:<input type="text" name="ciudad" /><br />
-	<input type="submit" value="Enviar" />
+<div ng-app="date">
+
+<div ng-controller="HDTutoCtrl">
+
+  <!-- jq -->
+  <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+
+
+
+
+
+</div>
+
+</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td class="padre">
+						Ciudad y Estado:
+					</td>
+					<td>
+						<input type="text" name="ciudad" size="50px" /><br />
+					</td>
+					<td>&nbsp;powered by <a href="">geon</a></td>
+				</tr>
+				<tr >
+					<td colspan="2" align="right" ><input type="submit" value="Enviar"  class="button"  /></td>
+					
+				</tr>
+			
+            </table>	
+	
+
 	</form>
+	</div>	
+ 			</td>
+ 		</tr>
+ 	</table>
+	
+ 
+ <center>
 </body>
 </html>

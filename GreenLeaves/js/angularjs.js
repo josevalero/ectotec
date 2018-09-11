@@ -7,7 +7,7 @@ window.onload =limpiar;
     document.getElementById('email').value="";
     // var txtFecha = document.getElementById('fecha').value;
    document.getElementById('Telph').value="";
-     document.getElementById('ubicacion').value="";
+     // document.getElementById('ubicacion').value="";
 }
  function validar(){
 
@@ -15,7 +15,7 @@ window.onload =limpiar;
     var txtCorreo = document.getElementById('email').value;
     // var txtFecha = document.getElementById('fecha').value;
     var txtTelph = document.getElementById('Telph').value;
-    var txtubi = document.getElementById('ubicacion').value;
+    // var txtubi = document.getElementById('ubicacion').value;
    
     var mesg ="";
     //Test campo obligatorio
@@ -41,9 +41,9 @@ window.onload =limpiar;
 
     }
 
-      if(txtubi == null || txtubi.length == 0 || /^\s+$/.test(txtubi)){
-      mesg += "\nEl campo ubicacion no debe ir vacío ";
-    }
+    //   if(txtubi == null || txtubi.length == 0 || /^\s+$/.test(txtubi)){
+    //   mesg += "\nEl campo ubicacion no debe ir vacío ";
+    // }
  if(mesg!=""){
 swal({
   title: "Alerta",
@@ -70,7 +70,7 @@ var txtNombre = document.getElementById("nombre").value;
     var txtCorreo = document.getElementById('email').value;
     var txtFecha = document.getElementById('fecha').value;
     var txtTelph = document.getElementById('Telph').value;
-    var txtubi = document.getElementById('ubicacion').value;
+    // var txtubi = document.getElementById('ubicacion').value;
 
 var x = document.forms["formulario"];
     var text = "";
@@ -81,13 +81,13 @@ var x = document.forms["formulario"];
     
         text = x.elements[0].value ;
         text2 = x.elements[1].value ;
-        text3 = txtubi;
+        // text3 = txtubi;
         text4= txtFecha;
        
     
    document.getElementById("name").innerHTML = text;
    document.getElementById("mail").innerHTML = text2;
-   document.getElementById("ubic").innerHTML=text3;
+   // document.getElementById("ubic").innerHTML=text3;
    document.getElementById("fecha").innerHTML=text4;
 }
     
@@ -162,14 +162,14 @@ var x = document.forms["formulario"];
 
  //  );
 
-// location
-google.maps.event.addDomListener(window, 'load', function () {
-            var places = new google.maps.places.Autocomplete(document.getElementById('ubicacion'));
-            google.maps.event.addListener(places, 'place_changed', function () {
-                var place = places.getPlace();
+// // location
+// google.maps.event.addDomListener(window, 'load', function () {
+//             var places = new google.maps.places.Autocomplete(document.getElementById('ubicacion'));
+//             google.maps.event.addListener(places, 'place_changed', function () {
+//                 var place = places.getPlace();
   
-            });
-        });
+//             });
+//         });
 
 
 //                                                            codigo viejo

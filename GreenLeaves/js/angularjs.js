@@ -216,8 +216,8 @@ var x = document.forms["formulario"];
             fecha = new Date(fecha);
 
             return (
-              fecha.getDate() > 9 ? fecha.getDate() : "0" + fecha.getDate()) + "-" + (["ene", "feb", "mar", "abr", "may", "jun", "jul", 
-              "ago", "sep", "oct", "nov", "dic"][fecha.getMonth()]) + "-" + fecha.getFullYear()
+              fecha.getDate() > 9 ? fecha.getDate() : "0" + fecha.getDate()) + "-" + (["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", 
+              "agosto", "septiembre", "octubre", "noviembre", "diciembre"][fecha.getMonth()]) + "-" + fecha.getFullYear()
         };
 });
 

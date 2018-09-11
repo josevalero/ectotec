@@ -15,7 +15,7 @@
 
 
 }
-.titulo{
+.head_title{
 	background:#12EB02;/*fondo de color*/
 	border-radius: 40px;/* estilo de esquina de cuadro*/
 	width: 1000px;
@@ -40,5 +40,23 @@
  height:20px;/*Aquí el Alto*/
 
 }
+.texto{
+	font-weight: bold;
+	color:#02C01C;
+}
+/*
+Optional adjustments for md-autocomplete in mobile screens
+*/
+
+#place-autocomplete > md-autocomplete md-input-container {
+  margin-top: -10px;
+}
 
 
+/*Media query for tablets and above */
+
+@media screen and (min-width: 480px) {
+  #place-autocomplete > md-autocomplete md-input-container {
+    padding-bottom: 0;
+  }
+}

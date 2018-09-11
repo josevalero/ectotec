@@ -1,112 +1,165 @@
-<html  >
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script> 
-<script type="text/javascript" src="js/angularjs.js"></script>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <title>Green Leaves</title>
 </head>
 <body>
-<center>
- 	<table>
- 		<tr>
- 			<td>
- 				<div>
-		
-	 <table  class="titulo"  border="1">
-		 <tr>
-			<td ><h1 class="font-titulo"> &nbsp;&nbsp;Green Leaves</h1></td>
-			<td  ><img src="images/images.png" align="right"></td>
-		 </tr>
-	 </table>
-    </div>
- 	
- 			</td>
- 		</tr>
- 		<tr>
- 			<td>
- 				<div>
-	<form>
-		
-			<table class="contenido" border="1">
-				<tr>
-					<td class="padre">
-						Nombre: 
-					</td>
-					<td>
-				        <input type="text" name="nombre" size="50px"/><br />
-					</td>
-				</tr>
-				<tr>
-					<td class="padre">
-						E-mail:
-					</td>
-					<td>
-						<input type="text" name="email" size="50px" /><br />
-					</td>
-				</tr>
-				<tr>
-					<td class="padre">
-						Tel&eacute;fono:
-					</td>
-					<td>
-						<input type="text" name="telefono" size="50px" /><br />
-					</td>
-				</tr>
-				<tr>
-					<td class="padre">
-						Fecha:
-					</td>
-					<td>
-				
-
-<div ng-app="date">
-
-<div ng-controller="HDTutoCtrl">
-
-  <!-- jq -->
-  <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
-
-
-
-
-
-</div>
-
-</div>
-
-					</td>
-				</tr>
-				<tr>
-					<td class="padre">
-						Ciudad y Estado:
-					</td>
-					<td>
-						<input type="text" name="ciudad" size="50px" /><br />
-					</td>
-					<td>&nbsp;powered by <a href="">geon</a></td>
-				</tr>
-				<tr >
-					<td colspan="2" align="right" ><input type="submit" value="Enviar"  class="button"  /></td>
-					
-				</tr>
-			
-            </table>	
-	
-
-	</form>
-	</div>	
- 			</td>
- 		</tr>
- 	</table>
-	
  
- <center>
+  
+
+    <div align="center">
+   <table  class="head_title"  >
+     <tr>
+      <td ><h1 class="font-titulo"> &nbsp;&nbsp;Green Leaves</h1></td>
+      <td  ><img src="images/images.png" align="right"></td>
+     </tr>
+   </table>
+    </div>
+
+   <div>
+   <form  id ="formulario" name="formulario" method="" action="#" > 
+<center>  
+       
+
+    
+      <table class="contenido" >
+        <tr>
+          <td class="padre">
+            Nombre: 
+          </td>
+          <td>
+                <input type="text" name="nombre"  id="nombre" size="50px" pattern="[A-Za-z0-9]{3,15}" placeholder="Ingrese su Nombre"  />
+                <br />
+         </td> 
+        </tr>
+        <tr>
+          <td class="padre">
+            E-mail:
+          </td>
+          <td>
+            <input type="email" name="email" id="email" size="50px" placeholder="Ingrese su Correo " /><br />
+          </td>
+        </tr>
+        <tr>
+          <td class="padre">
+            Tel&eacute;fono:
+          </td>
+          <td>
+            <input type="tel" name="Telph" id="Telph" size="50px" minlength="9" maxlength="16" placeholder="Ingrese su Numero" /><br />
+          </td>
+        </tr>
+        <tr>
+          <td class="padre">
+            Fecha:
+          </td>
+          <td>
+      
+ <div ng-app="date" ng-controller="AppCtrl" ng-cloak>
+ 	
+       <md-datepicker ng-model="myDate"  md-min-date="minDate" md-max-date="maxDate" ></md-datepicker>
+       <input type="date " name="fecha "style="visibility:hidden;" value="{{myDate | date:shortDate}}"> </input>
+</div>
+
+
+          </td>
+        </tr>
+        <tr>
+          <td class="padre">
+            Ciudad y Estado:
+          </td>
+          <td>
+             <div >
+   <input type="text"  size="50px" id="ubicacion" placeholder="ingresa su Ciudades" ></input>
+ </div>
+            
+          </td>
+          <td>&nbsp;powered by <a href="http://www.geonames.org/">geonnames.org</a></td>
+        </tr>
+        <tr >
+          <td colspan="2" align="right" >
+          	<input type="button" value="Enviar" id="enviar"   class="button"  onclick="validar()">
+          </td>
+          
+        </tr>
+      
+            </table>  
+    </center>  
+ </form>
+    </div> 
+
+
+
+                                             
+                  <!-- aqui empieza el otro formulario  -->
+
+
+
+<div>
+  <form  id ="formulario2" name="formulario2" method="" action="#" style="display:none;" > 
+    <center>  
+       
+<!-- 	<div id="cont_fe728f3be22bd97b3f80f852fe6b2276" class="contenido"><script type="text/javascript" async src="https://www.meteored.mx/wid_loader/fe728f3be22bd97b3f80f852fe6b2276"></script></div> -->
+
+    
+    <table >
+    	<tr>
+    		<td>
+    			<div>
+    				<p class="contenido" align="left">Estimado <b><label id="name">,</label></b></p>
+    			</div>
+    			
+    		</td>
+    		 
+    	</tr>
+    	<tr>
+    		<td>
+    			<div class="contenido">
+      		Hemos Recibido sus datos y nos pondremos en contacto con usted a la brevedad posible.Enviaremos <br>un correo con informacion a su cuenta <u><label id="mail"></label></u>
+				</div>
+    
+    		</td>
+    	</tr>
+    	<tr>
+    		<td><br><br>
+    			<div align="right">
+    				<b>Atte.</b><br><font class="texto">Green Leaves</font><br>
+    				<label id="ubic"></label> a <label id="fecha"></label>
+
+    			</div>
+    			
+    		</td>
+    	</tr>
+      </table>		
+    </center>  
+   </form>
+</div>
+    <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+
+<!-- angular librerias de location -->
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+
+
+    <!-- libreria de funciones  -->
+<script type="text/javascript" src="js/angularjs.js"></script>
+<script type="text/javascript">	
+
+
+
+</script>
+
+
 </body>
 </html>
